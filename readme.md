@@ -4,6 +4,11 @@
 
 This project is called `green-api-interfacee` and is a web interface that interacts with a backend API. It is built with React, Redux, and TypeScript.
 
+## Prerequisites
+
+- Node.js version >= 18.0.0
+- npm version >= 9.0.0
+
 ## Installation
 
 Before you can run this project, you need to have Node.js and npm installed on your machine. Then, you can follow these steps:
@@ -25,3 +30,9 @@ npm run dev
 This will start the development server, and you can view the project by opening a web browser and navigating to `http://localhost:5173`.
 
 ## Demo
+
+You can see a demo of this project at https://green-api-project.vercel.app/.
+
+## License
+
+This project is licensed under the MIT License.
