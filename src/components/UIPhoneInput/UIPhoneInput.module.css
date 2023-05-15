@@ -1,0 +1,19 @@
+.input {
+  border-radius: 12px !important;
+  font-size: 18px !important;
+}
+.input:focus {
+  outline: 2px solid var(--primary-color) !important;
+}
+.button {
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+}
+.button div {
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+}
+
+.button div:focus {
+  outline: 2px solid var(--primary-color) !important;
+}

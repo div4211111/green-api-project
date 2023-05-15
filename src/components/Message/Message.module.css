@@ -1,0 +1,28 @@
+.message {
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 1px 0.5px rgba(var(--shadow-rgb), 0.13);
+  display: flex;
+  gap: 4px;
+}
+
+.incoming {
+  background-color: var(--incoming-background);
+}
+
+.outgoing {
+  background-color: var(--outgoing-background);
+}
+
+.text {
+  align-self: center;
+  white-space: break-spaces;
+}
+
+.info {
+  align-self: flex-end;
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--bubble-meta);
+}

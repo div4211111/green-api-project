@@ -1,0 +1,109 @@
+.chat {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  background: #f0f2f5;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact img {
+  max-width: 40px;
+  border-radius: 50%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.body {
+  background-color: var(--conversation-panel-background);
+  background-image: url('../../assets/bg-chat-tile.png');
+  background-repeat: repeat;
+  flex: 1 1 auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 4px;
+}
+.body > :first-child {
+  margin-top: auto !important;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.incoming {
+  justify-content: flex-start;
+}
+.outgoing {
+  justify-content: flex-end;
+}
+.footer {
+  background: #f0f2f5;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px 16px 8px;
+}
+
+.input {
+  flex: 1 1 auto;
+}
+.button {
+  padding: 0 8px;
+  border-radius: 8px;
+}
+.button:focus {
+  outline: 2px solid var(--primary-color);
+}
+@media (max-width: 1000px) {
+  .chat {
+    padding: 0px;
+  }
+
+  .header {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .footer {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+@media (max-width: 400px) {
+  .header {
+    padding: 4px;
+    gap: 4px;
+  }
+  .contact {
+    gap: 4px;
+  }
+  .buttons {
+    gap: 4px;
+  }
+  .footer {
+    padding: 8px 4px 12px 4px;
+  }
+}
