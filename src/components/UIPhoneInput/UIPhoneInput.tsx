@@ -6,7 +6,7 @@ import cn from 'classnames';
 import { memo, useLayoutEffect, useRef } from 'react';
 
 export const UIPhoneInput = memo(
-  ({ ...props }: UIPhoneInputProps): JSX.Element => {
+  ({ id, ...props }: UIPhoneInputProps): JSX.Element => {
     const inputRef = useRef<HTMLInputElement | null>(null);
     useLayoutEffect(() => {
       const scrollTop = () => {
@@ -26,6 +26,7 @@ export const UIPhoneInput = memo(
         {...props}
         inputProps={{
           ref: inputRef,
+          id,
         }}
       />
     );

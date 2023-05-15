@@ -1,3 +1,5 @@
 import { PhoneInputProps } from 'react-phone-input-2';
 
-export interface UIPhoneInputProps extends PhoneInputProps {}
+export interface UIPhoneInputProps extends PhoneInputProps {
+  id?: string;
+}

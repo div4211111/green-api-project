@@ -23,10 +23,12 @@ export const PhoneForm = memo(
         onSubmit={submitHandler}
         {...props}
       >
+        <label htmlFor="phone">Phone number</label>
         <UIPhoneInput
           country={'ru'}
           onChange={setPhoneNumber}
           value={phoneNumber}
+          id="phone"
         />
         <UIButton type="submit" aria-label="Create chat">
           Create chat
