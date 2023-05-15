@@ -31,7 +31,12 @@ export const Chat = memo(({ className, ...props }: ChatProps): JSX.Element => {
 
   const sendHandler = async (event: FormEvent) => {
     event.preventDefault();
-    await dispatch(sendMessage({ textMessage: currentMessage }));
+    await dispatch(
+      sendMessage({
+        textMessage: currentMessage,
+        timestamp: Math.floor(Date.now() / 1000),
+      }),
+    );
     setCurrentMessage('');
   };
 
@@ -47,7 +52,7 @@ export const Chat = memo(({ className, ...props }: ChatProps): JSX.Element => {
       await dispatch(deleteNotification());
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   useLayoutEffect(() => {
     if (scrollToRef.current) {

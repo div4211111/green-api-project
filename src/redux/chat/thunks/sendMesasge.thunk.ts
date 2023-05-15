@@ -7,7 +7,7 @@ import { addMessage } from '../chat.slice';
 
 export const sendMessage = createAsyncThunk<
   void,
-  Pick<IMessage, 'textMessage'>,
+  Pick<IMessage, 'textMessage' | 'timestamp'>,
   {
     state: RootState;
     dispatch: AppDispatch;
@@ -15,7 +15,7 @@ export const sendMessage = createAsyncThunk<
 >(
   'chat/sendMessage',
   async (
-    { textMessage }: Pick<IMessage, 'textMessage'>,
+    { textMessage, timestamp }: Pick<IMessage, 'textMessage' | 'timestamp'>,
     { getState, dispatch, rejectWithValue },
   ) => {
     try {
@@ -34,6 +34,7 @@ export const sendMessage = createAsyncThunk<
           idMessage: data.idMessage,
           textMessage,
           chatId: chat.currentChat,
+          timestamp,
         }),
       );
     } catch (error) {
